@@ -104,9 +104,7 @@ class GraphRawResponse
      */
     public function setHttpResponseCodeFromHeader($rawResponseHeader)
     {
-        // https://tools.ietf.org/html/rfc7230#section-3.1.2
         preg_match('/HTTP\/\d(?:\.\d)?\s+(\d+)\s+/',$rawResponseHeader, $match);
-        $this->httpResponseCode = (int) $status;
     }
 
     /**
